@@ -1,5 +1,7 @@
 # How to take in use?
 
+> **Note:** This guide assumes familiarity with navigating system directories and manually replacing files.
+
 To apply the changes, you just need to download two files from this repository.\
 Paths may vary depending of your computer set-up.
 
