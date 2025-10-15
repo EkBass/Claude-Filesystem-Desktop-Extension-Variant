@@ -7,11 +7,11 @@
   "long_description": "This extension allows Claude to interact with your local filesystem, enabling it to read and write files directly. This can be useful for tasks such as file management, data processing, and automation of repetitive tasks. The extension provides a set of tools that can be used to navigate directories, read file contents, and write new files or modify existing ones.\n\nUnderneath the hood, it uses @modelcontextprotocol/server-filesystem.",
   "author": {
     "name": "Kristian Virtanen",
-    "url": "https://github.com/EkBass"
+    "url": "https://github.com/EkBass/Claude-Filesystem-Desktop-Extension-Variant/tree/main"
   },
-  "homepage": "https://github.com/EkBass",
-  "documentation": "https://notyetdone.com",
-  "support": "https://github.com/EkBass",
+  "homepage": "https://github.com/EkBass/Claude-Filesystem-Desktop-Extension-Variant/tree/main",
+  "documentation": "https://github.com/EkBass/Claude-Filesystem-Desktop-Extension-Variant/tree/main",
+  "support": "https://github.com/EkBass/Claude-Filesystem-Desktop-Extension-Variant/tree/main",
   "icon": "icon.png",
   "tools": [
 {
