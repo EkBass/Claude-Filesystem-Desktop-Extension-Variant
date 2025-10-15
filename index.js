@@ -463,15 +463,6 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
 				inputSchema: zodToJsonSchema(CopyFileArgsSchema),
 			},
             {
-                // Added by Krisu 14.10.2025
-				name: "delete_file",
-				description: "Safely delete a file or directory by moving it to /Trash. This acts like " +
-					"a recycle bin - files aren't permanently deleted and can be recovered. " +
-					"If a file with the same name exists in trash, a timestamp is appended. " +
-					"Works for both files and directories. Only works within allowed directories.",
-				inputSchema: zodToJsonSchema(DeleteFileArgsSchema),
-			},
-            {
                 name: "read_multiple_files",
                 description: "Read the contents of multiple files simultaneously. This is more " +
                     "efficient than reading files one by one when you need to analyze " +
