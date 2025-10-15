@@ -1,0 +1,173 @@
+{
+  "dxt_version": "0.1",
+  "name": "Filesystem",
+  "display_name": "Filesystem",
+  "version": "0.1.6",
+  "description": "Let Claude access your filesystem for file handling and much more.",
+  "long_description": "This extension allows Claude to interact with your local filesystem, enabling it to read and write files directly. This can be useful for tasks such as file management, data processing, and automation of repetitive tasks. The extension provides a set of tools that can be used to navigate directories, read file contents, and write new files or modify existing ones.\n\nUnderneath the hood, it uses @modelcontextprotocol/server-filesystem.",
+  "author": {
+    "name": "Kristian Virtanen",
+    "url": "https://github.com/EkBass"
+  },
+  "homepage": "https://github.com/EkBass",
+  "documentation": "https://notyetdone.com",
+  "support": "https://github.com/EkBass",
+  "icon": "icon.png",
+  "tools": [
+{
+      "name": "copy_file",
+      "description": "Copies file from somewhere to somewhere else. Added by Krisu 14.10.2025"
+    },
+    {
+      "name": "create_directory",
+      "description": "Create a new directory"
+    },
+    {
+      "name": "delete_file",
+      "description": "Safely delete a file or directory by moving it to /Trash. Added by Krisu 14.10.2025"
+    },
+    {
+      "name": "directory_tree",
+      "description": "Display directory structure as a tree"
+    },
+    {
+      "name": "edit_file",
+      "description": "Edit the contents of a file"
+    },
+    {
+      "name": "get_dotnet_info",
+      "description": "Returns detailed .NET SDK and runtime information including installed versions and environment details. Added by Krisu 15.10.2025"
+    },
+    {
+      "name": "get_drive_info",
+      "description": "Provides data on the size of the disk space and the space used. Added by Krisu 14.10.2025"
+    },
+    {
+      "name": "get_file_info",
+      "description": "Get information about a file"
+    },
+    {
+      "name": "get_freebasic_version",
+      "description": "Checks whether FreeBASIC compiler (fbc64) is installed and returns the version number. Added by Krisu 15.10.2025"
+    },
+    {
+      "name": "get_git_version",
+      "description": "Checks whether Git version control is installed and returns the version number. Added by Krisu 15.10.2025"
+    },
+    {
+      "name": "get_local_time",
+      "description": "Returns local time from user computer. Added by Krisu 14.10.2025"
+    },
+    {
+      "name": "get_network_info",
+      "description": "Get network configuration using ipconfig (Windows) or ifconfig (Linux/Mac). Returns network adapter details, IP addresses, and connection info. Added by Krisu 15.10.2025"
+    },
+    {
+      "name": "get_node_version",
+      "description": "Checks whether Node.js is installed and returns the version number. Added by Krisu 15.10.2025"
+    },
+    {
+      "name": "get_npm_global_packages",
+      "description": "Lists all globally installed npm packages with their version numbers and dependencies. Added by Krisu 15.10.2025"
+    },
+    {
+      "name": "get_npm_project_packages",
+      "description": "Lists all npm packages installed in the current project directory with their version numbers and dependencies. Added by Krisu 15.10.2025"
+    },
+    {
+      "name": "get_npm_version",
+      "description": "Checks whether npm (Node Package Manager) is installed and returns the version number. Added by Krisu 15.10.2025"
+    },
+    {
+      "name": "get_nvidia_smi",
+      "description": "Get detailed NVIDIA GPU information using nvidia-smi command. Returns GPU model, memory usage, temperature, driver version, and utilization stats. Added by Krisu 15.10.2025"
+    },
+    {
+      "name": "get_pip_packages",
+      "description": "Lists all Python packages installed via pip with their version numbers. Added by Krisu 15.10.2025"
+    },
+    {
+      "name": "get_pip_version",
+      "description": "Checks whether pip (Python package installer) is installed and returns the version number. Added by Krisu 15.10.2025"
+    },
+    {
+      "name": "get_python_version",
+      "description": "Checks whether Python is installed and if so, returns the version number. Added by Krisu 15.10.2025"
+    },
+    {
+      "name": "get_system_info",
+      "description": "Get CPU and RAM information including processor model, core count, clock speed, total memory, and memory usage. Works cross-platform. Added by Krisu 15.10.2025"
+    },
+      {
+      "name": "get_sqlite3_version",
+      "description": "Checks whether SQLite3 is installed and if so, returns the version number. Added by Krisu 15.10.2025"
+    },
+    {
+      "name": "list_allowed_directories",
+      "description": "List directories that can be accessed"
+    },
+    {
+      "name": "list_directory",
+      "description": "List contents of a directory"
+    },
+    {
+      "name": "move_file",
+      "description": "Move or rename a file"
+    },
+    {
+      "name": "read_file",
+      "description": "Read the contents of a file"
+    },
+    {
+      "name": "read_multiple_files",
+      "description": "Read the contents of multiple files"
+    },
+    {
+      "name": "search_files",
+      "description": "Search for files by name or content"
+    },
+    {
+      "name": "write_file",
+      "description": "Write content to a file"
+    }
+  ],
+  "server": {
+    "type": "node",
+    "entry_point": "server/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/server/index.js",
+        "${user_config.allowed_directories}"
+      ]
+    }
+  },
+  "keywords": [
+    "api",
+    "automation",
+    "productivity",
+    "Claude AI"
+  ],
+  "license": "MIT",
+  "compatibility": {
+    "claude_desktop": ">=0.10.0",
+    "platforms": [
+      "darwin",
+      "win32",
+      "linux"
+    ],
+    "runtimes": {
+      "node": ">=16.0.0"
+    }
+  },
+  "user_config": {
+    "allowed_directories": {
+      "type": "directory",
+      "title": "Allowed Directories",
+      "description": "Select directories the filesystem server can access",
+      "multiple": true,
+      "required": true,
+      "default": []
+    }
+  }
+}
