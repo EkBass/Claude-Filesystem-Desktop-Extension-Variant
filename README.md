@@ -2,8 +2,11 @@
 
 **Owner:** Kristian "Krisu" Virtanen\
 **Purpose:** Learning and adding some neat or fun features.\
-**Email:** krisu.virtanen@gmail.com
-**Help?** Yes, I would appreciate it.
+**Email:** krisu.virtanen@gmail.com\
+**Help?** Yes, I would appreciate it.\
+**Usage:** See HOWTO.md
+
+---
 
 > [!NOTE]  
 > This is a modification of the Claude Desktop extension produced by Anthropic itself.\
